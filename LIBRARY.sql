@@ -11,7 +11,6 @@ CREATE TABLE BOOK(Book_id int,Title varchar(20),Language_id int,MRP bigint,Publi
 CREATE TABLE Book_Author(Book_id int,Author_id int,PRIMARY KEY(Book_id,Author_id),FOREIGN KEY(Book_id) REFERENCES BOOK(Book_id),FOREIGN KEY(Author_id) REFERENCES Author(Author_id));
 CREATE TABLE Book_Issue(Issue_id int,Date_of_issue date,Book_id int,Member_id int,Expected_date_of_return date,PRIMARY KEY(Issue_id),FOREIGN KEY(Book_id) REFERENCES BOOK(Book_id),FOREIGN KEY(Member_id) REFERENCES Member(Member_id));
 CREATE TABLE Book_Return(Issue_id int,Actual_date_of_return date,late_days int,late_fee int,FOREIGN KEY(Issue_id) REFERENCES Book_Issue(Issue_id));
-INSERT INTO Book_Issue VALUES(1,'2022-8-21',1,20,'2022-8-28'),(2,'2022-8-23',2,17,'2022-8-30'),(3,'2022-8-20',3,15,'2022-8-27'),(4,'2022-8-19',4,10,'2022-8-26');
 
 --g
 INSERT INTO Publisher VALUES(1,'Amal','Qwerty'),(2,'Sathyan','Asdff'),(3,'Vinny','Zxcvt'),(4,'Manu','Tyuoio'),(5,'Ram','Sdgfh');
@@ -21,6 +20,7 @@ INSERT INTO Language VALUES(3,'Malayalam'),(5,'English'),(6,'Hindi');
 INSERT INTO Late_Fee_Rule VALUES(0,7,10),(7,30,100);
 INSERT INTO BOOK VALUES(1,'C PROGRAM',5,300,2,'2000-10-21',3,'Returned'),(2,'CHERUKADHA',3,150,4,'2010-07-30',1,'Not Returned'),(3,'JAVA',5,200,1,'2010-02-10',2,'Not Returned'),(4,'DATA BASE',6,250,3,'2005-10-03',1,'Returned');
 INSERT INTO Book_Author VALUES(1,3),(2,4),(3,2),(4,1);
+INSERT INTO Book_Issue VALUES(1,'2022-8-21',1,20,'2022-8-28'),(2,'2022-8-23',2,17,'2022-8-30'),(3,'2022-8-20',3,15,'2022-8-27'),(4,'2022-8-19',4,10,'2022-8-26');                                                                                     
 
 
 
