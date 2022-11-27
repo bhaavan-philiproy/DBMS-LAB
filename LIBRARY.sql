@@ -20,7 +20,6 @@ INSERT INTO Language VALUES(3,'Malayalam'),(5,'English'),(6,'Hindi');
 INSERT INTO Late_Fee_Rule VALUES(0,7,10),(7,30,100);
 INSERT INTO BOOK VALUES(1,'C PROGRAM',5,300,2,'2000-10-21',3,'Returned'),(2,'CHERUKADHA',3,150,4,'2010-07-30',1,'Not Returned'),(3,'JAVA',5,200,1,'2010-02-10',2,'Not Returned'),(4,'DATA BASE',6,250,3,'2005-10-03',1,'Returned');
 INSERT INTO Book_Author VALUES(1,3),(2,4),(3,2),(4,1);
-INSERT INTO Book_Issue VALUES(1,'2022-8-21',1,20,'2022-8-28'),(2,'2022-8-23',2,17,'2022-8-30'),(3,'2022-8-20',3,15,'2022-8-27'),(4,'2022-8-19',4,10,'2022-8-26');                                                                                     
 
 
 
